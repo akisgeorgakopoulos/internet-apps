@@ -16,6 +16,7 @@ server.use('/Medicine', medicine);
 
 server.get('/',(req,res)=> {
 
+    //res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5000');
     res.send({name:'Evgeni Malkin', team:'Pittsburgh Penguins'});
 
 });
