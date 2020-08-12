@@ -4,7 +4,6 @@ const router = express.Router();
 
 //const { Parser } = require('json2csv');
 
-//const Map = require('../models/Map');
 const Article = require('../models/Article');
 
 mongoose
@@ -103,7 +102,7 @@ router.get('/:Name1',
             let length_a = rtt.length;
             r_array[i].number_of_articles = length_a;
              
-            // //if we got no record -> zero
+            //if we got no record -> zero
             if (length_a === 0){
                 console.log("no record matches");
                 r_array[i].first_date = '-';
@@ -128,7 +127,7 @@ router.get('/:Name1',
                 r_array[i].last_date = rtt[t].publish_time;
                 //console.log(rtt[i].publish_time);
                 
-                // //find the first non void publish_time
+                //find the first non void publish_time
                 let j = 0;
                 while( rtt[j].publish_time == ''){
                     j = j + 1;
@@ -171,10 +170,10 @@ router.get('/:Name1',
         
         }
         
-        console.log(r_array);
+        //console.log(r_array);
         res.send(r_array);
 
-        //res.send("Clippers win the championship");    
+           
     }
 );
 

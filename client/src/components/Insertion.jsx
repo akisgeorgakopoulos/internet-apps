@@ -92,7 +92,7 @@ export default class Insertion extends Component {
         if (this.state.name1 === ''){
             alert('Must give name1');
         }else{
-		axios.get(`http://localhost:5000/Medicine/${this.state.name1}?Name2=${this.state.name2}&Name3=${this.state.name3}&Name4=${this.state.name4}&Name5=${this.state.name5}&Name6=${this.state.name6}&Name7=${this.state.name7}&Name8=${this.state.name8}&Name9=${this.state.name9}&Name10=${this.state.name10}`)
+		axios.get(`/Medicine/${this.state.name1}?Name2=${this.state.name2}&Name3=${this.state.name3}&Name4=${this.state.name4}&Name5=${this.state.name5}&Name6=${this.state.name6}&Name7=${this.state.name7}&Name8=${this.state.name8}&Name9=${this.state.name9}&Name10=${this.state.name10}`)
 			 .then((res) => {
                 
                 //console.log(res)
