@@ -10,10 +10,11 @@ mongoose
 	.connect('mongodb://localhost:27017/Internet_Apps', {
 		useNewUrlParser: true,
 		useUnifiedTopology: true
-	})
+    })
+    .then(() => console.log('Connected to MongoDB'))
 	.catch((err) => console.error('Problem connecting to MongoDB', err));
 
-console.log('Mongo is ok!!');
+
 
 router.get('/:Name1',
 	async (req, res) => {
@@ -104,7 +105,7 @@ router.get('/:Name1',
              
             //if we got no record -> zero
             if (length_a === 0){
-                console.log("no record matches");
+                //console.log("no record matches");
                 r_array[i].first_date = '-';
                 r_array[i].last_date = '-';
                 r_array[i].year_with_most = '-';

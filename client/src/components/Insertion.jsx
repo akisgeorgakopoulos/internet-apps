@@ -126,7 +126,7 @@ export default class Insertion extends Component {
 		);
 	}
 	fillTable(dataset) {
-        console.log(dataset)
+        //console.log(dataset)
         return  dataset.map( (details, index) => {
             return (
                 <tr>
